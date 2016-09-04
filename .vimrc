@@ -27,7 +27,7 @@ set cursorline                    " display a marker on current line
 set ruler                         " show cursor position
 set showmatch                     " show matching ) and }
 set showmode                      " show current mode
-
+set syntax=on											" enable syntax highlight
 " Add Ctrl+C, Ctrl+X, Ctrl+V keys to copy/cut/paste action
 vmap <C-c> "+yi
 vmap <C-x> "+c
