@@ -29,6 +29,7 @@ set showmatch											" show matching ) and }
 set showmode											" show current mode
 set nocursorcolumn								" disabled by default
 set norelativenumber							" disabled by default
+set showcmd												" show commands
 
 "" Syntax
 syntax on													" syntax highlight
