@@ -22,7 +22,7 @@ set smartcase											" ... unless they contain at least one capital letter
 
 "" Other
 set ls=2													" always show status bar
-set number												" show line numbers
+set nonumber											" dont show line numbers
 set nocursorline									" dont display a marker on current line (performance)
 set ruler													" show cursor position
 set showmatch											" show matching ) and }
