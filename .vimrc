@@ -35,6 +35,8 @@ set showcmd												" show commands
 syntax on													" syntax highlight
 syntax sync minlines=256
 
+set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+
 " Add Ctrl+C, Ctrl+X, Ctrl+V keys to copy/cut/paste action
 vmap <C-c> "+yi
 vmap <C-x> "+c
