@@ -11,7 +11,7 @@ set fileencoding=utf-8
 "" Whitespace
 set wrap													" wrap lines
 set tabstop=2 shiftwidth=2				" a tab is two spaces
-set noexpandtab										" do not replace tab with spaces
+set expandtab											" do replace tab with spaces
 set backspace=indent,eol,start		" backspace through everything in insert mode
 
 "" Searching
