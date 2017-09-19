@@ -22,13 +22,13 @@ set smartcase											" ... unless they contain at least one capital letter
 
 "" Other
 set ls=2													" always show status bar
-set nonumber											" dont show line numbers
+set number											" dont show line numbers
 set nocursorline									" dont display a marker on current line (performance)
 set ruler													" show cursor position
 set showmatch											" show matching ) and }
 set showmode											" show current mode
 set nocursorcolumn								" disabled by default
-set norelativenumber							" disabled by default
+set relativenumber							" disabled by default
 set showcmd												" show commands
 
 "" Syntax
@@ -42,3 +42,34 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <C-r><C-o>+
+
+if exists("+showtabline")
+     function MyTabLine()
+         let s = ''
+         let t = tabpagenr()
+         let i = 1
+         while i <= tabpagenr('$')
+             let buflist = tabpagebuflist(i)
+             let winnr = tabpagewinnr(i)
+             let s .= '%' . i . 'T'
+             let s .= (i == t ? '%1*' : '%2*')
+             let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+             let s .= ' '
+             let s .= '[' . i . ']'
+             let s .= '%*'
+             let s .= (i == t ? '%#TabLineSel#' : '%#TabLine#')
+             let file = bufname(buflist[winnr - 1])
+             let file = fnamemodify(file, ':p:t')
+             if file == ''
+                 let file = '[No Name]'
+             endif
+             let s .= file . ' '
+             let i = i + 1
+         endwhile
+         let s .= '%T%#TabLineFill#%='
+         let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+         return s
+     endfunction
+     set stal=2
+     set tabline=%!MyTabLine()
+endif
