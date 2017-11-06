@@ -12,30 +12,30 @@ set termencoding=utf-8
 set fileencoding=utf-8
 
 "" Whitespace
-set wrap													" wrap lines
-set tabstop=2 shiftwidth=2				" a tab is two spaces
-set expandtab											" do replace tab with spaces
-set backspace=indent,eol,start		" backspace through everything in insert mode
+set wrap                          " wrap lines
+set tabstop=2 shiftwidth=2        " a tab is two spaces
+set expandtab                     " do replace tab with spaces
+set backspace=indent,eol,start    " backspace through everything in insert mode
 
 "" Searching
-set hlsearch											" highlight matches
-set incsearch											" incremental searching
-set ignorecase										" searches are case insensitive...
-set smartcase											" ... unless they contain at least one capital letter
+set hlsearch                      " highlight matches
+set incsearch                     " incremental searching
+set ignorecase                    " searches are case insensitive...
+set smartcase                     " ... unless they contain at least one capital letter
 
 "" Other
-set ls=2													" always show status bar
-set number											  " show line numbers
-set nocursorline									" dont display a marker on current line (performance)
-set ruler													" show cursor position
-set showmatch											" show matching ) and }
-set showmode											" show current mode
-set nocursorcolumn								" disabled by default
-set relativenumber							  " show relative number
-set showcmd												" show commands
+set ls=2                          " always show status bar
+set number                        " show line numbers
+set nocursorline                  " dont display a marker on current line (performance)
+set ruler                         " show cursor position
+set showmatch                     " show matching ) and }
+set showmode                      " show current mode
+set nocursorcolumn                " disabled by default
+set relativenumber                " show relative number
+set showcmd                       " show commands
 
 "" Syntax
-syntax on													" syntax highlight
+syntax on                         " syntax highlight
 syntax sync minlines=256
 
 " Enable filetype plugins
