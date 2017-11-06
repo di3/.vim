@@ -72,7 +72,6 @@ let g:lasttab = 1
 nmap <silent><leader>t :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
 
-
 " Move a line of text
 nmap <silent><leader>j mz:m+<cr>`z
 nmap <silent><leader>k mz:m-2<cr>`z
@@ -82,6 +81,8 @@ noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
 " Toggle paste mode on and off
 map <silent><leader>pp :setlocal paste!<cr>
+" Toggle line numbers
+map <silent><leader>nn :setlocal number!<cr>:setlocal relativenumber!<cr>
 
 if exists("+showtabline")
      function MyTabLine()
