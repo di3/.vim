@@ -10,19 +10,13 @@ wget -O pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master
 cd ..
 ```
 
-## 2 install Snipmate
-```sh
-cd bundle
-git clone https://github.com/tomtom/tlib_vim.git
-git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
-git clone https://github.com/garbas/vim-snipmate.git
-```
-
-## 3 link .vimrc
+## 2 link .vimrc
 ```sh
 cd ~
 ln -sf .vim/.vimrc .vimrc
 ```
+
+## 3 submodules
 
 ```sh
 cd ~/.vim
