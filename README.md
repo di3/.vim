@@ -23,3 +23,8 @@ git clone https://github.com/garbas/vim-snipmate.git
 cd ~
 ln -sf .vim/.vimrc .vimrc
 ```
+
+```sh
+cd ~/.vim
+git submodule update --init
+```
