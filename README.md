@@ -5,6 +5,12 @@ overview of my vim settings.
 
 clone this repository to ~/.vim/
 
+```sh
+cd ~
+rm -rf .vim
+git clone https://github.com/di3/.vim.git
+```
+
 ### 1 install pathogen
 ```sh
 cd autoload
