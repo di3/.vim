@@ -1,5 +1,5 @@
-
-execute pathogen#infect()
+set nocp
+call pathogen#infect()
 
 "" Files, backups and undo
 set nobackup
@@ -109,7 +109,7 @@ if exists("+showtabline")
       let i = i + 1
     endwhile
     let s .= '%T%#TabLineFill#%='
-    let s .= (tabpagenr('$') > 1 ? '%999XX' : 'X')
+    let s .= (tabpagenr('$') > 1 ? '%999XX' : '')
     return s
   endfunction
   set stal=2
